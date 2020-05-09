@@ -1,5 +1,3 @@
-console.log('Hello from js/scripts.js!');
-
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
 const guesses = document.querySelector('.guesses');
@@ -11,14 +9,12 @@ const guessField = document.querySelector('.guessField');
 
 let guessCount = 1;
 let resetButton;
-guessField.focus();
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
   }
-
   guesses.textContent += userGuess + ' ';
 
   if (userGuess === randomNumber) {
